@@ -1,7 +1,7 @@
 /* Color Variables */
 :root {
-    --primary-color: hsl(72, 56%, 59%); /* Deep Corporate Blue */
-    --accent-color: #ffcc00;  /* Gold/Yellow for CTA */
+    --primary-color: #C5A42F; /* Deep Corporate Blue */
+    --accent-color: #ffffff;  /* Gold/Yellow for CTA */
 }
 
 body {
