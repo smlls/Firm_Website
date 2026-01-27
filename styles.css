@@ -1,0 +1,78 @@
+/* Color Variables */
+:root {
+    --primary-color: #003366; /* Deep Corporate Blue */
+    --accent-color: #ffcc00;  /* Gold/Yellow for CTA */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px; /* Offset for fixed navbar */
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.hero-section {
+    /* REPLACE 'team-placeholder.jpg' WITH YOUR ACTUAL IMAGE URL */
+    background: url('https://via.placeholder.com/1920x800/555/fff?text=Team+Picture+Here') no-repeat center center;
+    background-size: cover;
+    height: 90vh; /* 90% of screen height */
+    position: relative;
+    margin-top: -56px; /* Pull up behind navbar */
+}
+
+/* Dark overlay for Hero to make text readable */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+/* Mission Section */
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Stats Section */
+#stats {
+    background-color: var(--primary-color);
+}
+
+/* Services Cards */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-warning {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #000;
+    font-weight: bold;
+}
+
+/* Footer Links */
+footer a:hover {
+    color: #fff !important;
+    text-decoration: underline !important;
+}
