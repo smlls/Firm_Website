@@ -1,7 +1,11 @@
 /* Color Variables */
 :root {
-    --primary-color: #C5A42F; /* Deep Corporate Blue */
-    --accent-color: #ffffff;  /* Gold/Yellow for CTA */
+    --primary-color: #c5a42f; /* Deep Corporate Blue */
+    --accent-color: #a78b27;  /* Gold/Yellow for CTA */
+
+    /* --bs-primary: var(--primary-color); */
+    --bs-primary-rgb:197, 164, 47;
+    /* --bs-focus-ring-color: rgba(197,164,47,0.35); */
 }
 
 body {
@@ -59,17 +63,28 @@ body {
 }
 
 /* Buttons */
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:focus-visible
+.btn-primary:active:focus{
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover{
+    background-color: #a78b27 !important;
+    border-color: #a78b27 !important;
 }
 
 .btn-warning {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
     color: #000;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
+
+
 
 /* Footer Links */
 footer a:hover {
