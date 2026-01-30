@@ -17,7 +17,7 @@ body {
 .navbar-brand {
     font-weight: bold;
     letter-spacing: 1px;
-}
+    }
 
 /* Hero Section */
 .hero-section {
@@ -91,3 +91,27 @@ footer a:hover {
     color: #fff !important;
     text-decoration: underline !important;
 }
+
+.nav-socials {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-socials i {
+    font-size: 1.3rem;
+    color: #ffffff !important;
+    transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-socials a {
+    color: inherit !important;
+    text-decoration: none;
+}
+
+.nav-socials a:hover i {
+    color: var(--primary-color) !important;
+    transform: scale(1.15);
+    opacity: 0.9;
+}
+
