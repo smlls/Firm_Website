@@ -5,132 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Miscellaneous</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#home"><img src="logo.webp" alt="Tax Firm Logo" height="40"> </a>
-            <a href="index.html#services-preview" class="btn btn-outline-light btn-sm">Back to Home</a>
-        </div>
-    </nav>
-
-    <div class="bg-primary text-white py-4 text-center">
-        <div class="container">
-            <h1>Miscellaneous Services</h1>
-            <p>Select a service below to book an appointment.</p>
-        </div>
-    </div>
-
-    <div class="container py-5">
-
-        <div class="mb-4">
-            <a href="index.html" class="btn btn-secondary">&larr; Back to Main Page</a>
-            <a href="index.html#services-preview" class="btn btn-secondary ms-2">Other Services</a>
-        </div>
-
-        <div class="row align-items-center mb-5 border-bottom pb-5">
-            <div class="col-md-7">
-                <h3 class="fw-bold">DMV Registration</h3>
-                <p>Avoid the long lines at the DMV. We assist with vehicle registration renewals, title transfers, and other Department of Motor Vehicles paperwork efficiently and accurately.</p>
-                <button class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('DMV Registration')">Book Now</button>
-            </div>
-            <div class="col-md-5">
-                <div class="bg-light rounded d-flex align-items-center justify-content-center text-muted" style="height: 250px; border: 2px dashed #ccc;">
-                    Image: DMV
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center mb-5 border-bottom pb-5">
-            <div class="col-md-7 order-md-2">
-                <h3 class="fw-bold">Unemployment Assistance</h3>
-                <p>Navigating unemployment benefits can be confusing. We help you understand the requirements, fill out the necessary applications, and ensure your claims are processed correctly.</p>
-                <button class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('Unemployment Assistance')">Book Now</button>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <div class="bg-light rounded d-flex align-items-center justify-content-center text-muted" style="height: 250px; border: 2px dashed #ccc;">
-                    Image: Unemployment
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title">Book Appointment</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Service:</label>
-                            <input type="text" class="form-control" id="modalServiceName" readonly>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-6 mb-3">
-                                <label class="form-label">First Name *</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <label class="form-label">Last Name *</label>
-                                <input type="text" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Email *</label>
-                            <input type="email" class="form-control" required>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Phone (Optional)</label>
-                            <input type="tel" class="form-control">
-                        </div>
-
-                        <div class="row">
-                            <div class="col-6 mb-3">
-                                <label class="form-label">Date *</label>
-                                <input type="date" class="form-control" required>
-                            </div>
-                            <div class="col-6 mb-3">
-                                <label class="form-label">Time *</label>
-                                <input type="time" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Appointment Type *</label>
-                            <select class="form-select">
-                                <option>In-Person</option>
-                                <option>Virtual (Zoom/Phone)</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Message (Optional)</label>
-                            <textarea class="form-control" rows="3"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Confirm Booking</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function setServiceName(name) {
-            document.getElementById('modalServiceName').value = name;
+    <style>
+        body.no-fixed-nav {
+            padding-top: 0 !important;
         }
-    </script>
+    </style>
+</head>
+
+<body class="no-fixed-nav">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="logo.webp" alt="Tax Firm Logo" height="40"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item d-flex align-items-center me-3 nav-socials">
+                    <a href="https://www.facebook.com/kayrosmultiservices/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kayrosmultiservices/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@mariella.guzman" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#contact-section">Contact Us</a></li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary text-white px-3 ms-2" href="https://login.atomanager.com/ATOM_KROS/WebInfo.aspx" target="_blank">Client Portal</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="bg-primary text-white py-4 text-center">
+    <div class="container">
+        <h1>Miscellaneous Services</h1>
+        <p>Select a service below to book an appointment.</p>
+    </div>
+</div>
+
+<div class="container py-5">
+
+    <div class="mb-4">
+        <a href="index.html" class="btn btn-secondary">&larr; Back to Main Page</a>
+        <a href="index.html#services-preview" class="btn btn-secondary ms-2">Other Services</a>
+    </div>
+
+    <div class="row align-items-center mb-5 border-bottom pb-5">
+        <div class="col-md-7">
+            <h3 class="fw-bold">DMV Registration</h3>
+            <p>Avoid the long lines at the DMV. We assist with vehicle registration renewals, title transfers, and other Department of Motor Vehicles paperwork efficiently and accurately.</p>
+            <button class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('DMV Registration')">Book Now</button>
+        </div>
+        <div class="col-md-5">
+            <div class="bg-light rounded d-flex align-items-center justify-content-center text-muted" style="height: 250px; border: 2px dashed #ccc;">
+                Image: DMV
+            </div>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5 border-bottom pb-5">
+        <div class="col-md-7 order-md-2">
+            <h3 class="fw-bold">Unemployment Assistance</h3>
+            <p>Navigating unemployment benefits can be confusing. We help you understand the requirements, fill out the necessary applications, and ensure your claims are processed correctly.</p>
+            <button class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="setServiceName('Unemployment Assistance')">Book Now</button>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <div class="bg-light rounded d-flex align-items-center justify-content-center text-muted" style="height: 250px; border: 2px dashed #ccc;">
+                Image: Unemployment
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Book Appointment</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Service:</label>
+                        <input type="text" class="form-control" id="modalServiceName" readonly>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label class="form-label">First Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label class="form-label">Last Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email *</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone (Optional)</label>
+                        <input type="tel" class="form-control">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label class="form-label">Date *</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label class="form-label">Time *</label>
+                            <input type="time" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Appointment Type *</label>
+                        <select class="form-select">
+                            <option>In-Person</option>
+                            <option>Virtual (Zoom/Phone)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message (Optional)</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function setServiceName(name) {
+        document.getElementById('modalServiceName').value = name;
+    }
+</script>
 </body>
 </html>
